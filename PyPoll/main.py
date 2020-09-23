@@ -53,3 +53,22 @@ with open(csvpath) as csvfile:
         Winning_Name = "Li"
     Else:
         Winning_Name = "O'Tooley"
+            # Calculate percentages for each candidate:
+    Khan_percent = Khan_votes / Total_votes
+    Correy_percent = Correy_votes / Total_votes
+    Li_percent = Li_votes / Total_votes
+    OTooley_percent = OTooley_votes / Total_votes
+
+#Printing Election Results:
+print("Election Results")
+print("----------------------------------------")
+print(f"Total Votes: {Total_votes}")
+print("----------------------------------------")
+print(f"Khan: {Khan_percent:.3%} ({Khan_votes}))
+print(f"Correy: {Correy_percent: .3%} ({Correy_votes})
+print(f"Li: {Li_percent: .3%} ({Li_votes})
+print(f"OTooley: {OTooley_percent: ..3%} ({OTooley_votes})
+print("----------------------------------------")
+print(f"Winner: {Winning_name})
+
+print("----------------------------------------")
