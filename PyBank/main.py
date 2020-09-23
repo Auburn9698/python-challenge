@@ -74,7 +74,7 @@ print("Financial Analysis:")
 print("-----------------------------------------------")
 print(f"Total Months: {total_months}")
 print(f"Net Total: ${total_amount}")
-print(f"Average Change: ${average_change}")
+print(f"Average Change: ${average_change:.2f}")
 print(f"Greatest Increase in Profits: {increase_month} (${greatest_increase})")
 print(f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease})")
 
