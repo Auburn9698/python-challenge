@@ -6,7 +6,7 @@ import csv
 
 # Paths for CSV files:
 csvpath = os.path.join("Resources", "budget_data.csv")
-pathout = os.path.join("Resources", "analysis.txt")
+pathout = os.path.join("analysis", "analysis.txt")
 
 # Create the variables:
 total_months = 0
