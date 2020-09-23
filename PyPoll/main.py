@@ -33,25 +33,24 @@ with open(csvpath) as csvfile:
         # Add up votes per candidate:
         if (row[2] == "Khan"):
             Khan_votes = Khan_votes + 1
-        elif (row[2]) == "Correy"):
+        elif (row[2] == "Correy"):
             Correy_votes = Correy_votes + 1
-        elif (row[2]) == "Li"):
+        elif (row[2] == "Li"):
             Li_votes = Li_votes + 1
         else:
             OTooley_votes = OTooley_votes + 1
     
     # Compare Totals:
-    Totals = (Khan_votes, Correy_votes, Li_votes, OTooley_votes)
-    Winner = max(Totals)
-    
+    Winner = max(Khan_votes, Correy_votes, Li_votes, OTooley_votes)
+       
     #Setting name of winner:
-    If Winner == Khan_votes:
+    if Winner == Khan_votes:
         Winning_Name = "Khan"
-    Elif Winner == Correy_votes:
+    elif Winner == Correy_votes:
         Winning_Name = "Correy"
-    Elif Winner == Li_votes:
+    elif Winner == Li_votes:
         Winning_Name = "Li"
-    Else:
+    else:
         Winning_Name = "O'Tooley"
             # Calculate percentages for each candidate:
     Khan_percent = Khan_votes / Total_votes
@@ -65,9 +64,9 @@ print("----------------------------------------")
 print(f"Total Votes: {Total_votes}")
 print("----------------------------------------")
 print(f"Khan: {Khan_percent:.3%} ({Khan_votes})")
-print(f"Correy: {Correy_percent: .3%} ({Correy_votes}"")
-print(f"Li: {Li_percent: .3%} ({Li_votes}"")
-print(f"OTooley: {OTooley_percent: ..3%} ({OTooley_votes}")
+print(f"Correy: {Correy_percent: .3%} ({Correy_votes})")
+print(f"Li: {Li_percent:.3%} ({Li_votes})")
+print(f"OTooley: {OTooley_percent:.3%} ({OTooley_votes})")
 print("----------------------------------------")
-print(f"Winner: {Winning_name}"")
+print(f"Winner: {Winning_name}")
 print("----------------------------------------")
