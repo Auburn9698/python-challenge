@@ -83,7 +83,7 @@ with open(pathout, "w") as text_file:
     text_file.write("------------------------------------------\n")
     text_file.write(f"Total Months: {total_months}\n")
     text_file.write(f"Net Total: ${total_amount}\n")
-    text_file.write(f"Average Change: ${average_change}\n")
+    text_file.write(f"Average Change: ${average_change:.2f}\n")
     text_file.write(f"Greatest Increase in Profits: {increase_month} (${greatest_increase})\n")
     text_file.write(f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease})\n")
 
