@@ -27,12 +27,14 @@ with open(csvpath) as csvfile:
     
     # Read The Header Row First (Skip This Step If There Is No Header)
     csv_header = next(csvreader)
-    
-    # Loop through file:
+    row = next(csvreader)  #For skipping first month that messed with avg change.
+    previous_amount = int(row[1])
+
+    # Loop through file, calculate basic totals:
     for row in csvreader:
-        #Calculations for totals:
         total_months = total_months + 1
         total_amount = total_amount + int(row[1])
+        # Add to the months list, used later for month indexing
         month.append(row[0])
 
         # Check to see if this is the greatest profit so far:
@@ -40,7 +42,7 @@ with open(csvpath) as csvfile:
             greatest_profit = int(row[1])
             greatest_profit_month = row[0]
 
-        # Note: Not sure I needed greatest profit or greatest loss.
+        # Note: Not sure I needed largest-profit or largest-loss.
         # It looked like the homework was asking for that at first,
         # but I think it was actually looking for the greatest changes
         # +/- from month to month.  Wasn't real clear at first.
@@ -51,9 +53,9 @@ with open(csvpath) as csvfile:
             greatest_loss_month = row[0]
 
         # For Calculating the average monthly change amount:
-        monthly_change = int(row[1]) - int(initial_amount)
+        monthly_change = int(row[1]) - previous_amount
         monthly_changes.append(monthly_change)
-        initial_amount = int(row[1])
+        previous_amount = int(row[1])
        
 
     #Calculate average change:
@@ -79,7 +81,7 @@ print(f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease})")
 
 with open(pathout, "w") as text_file:
     text_file.write("Financial Analysis\n")
-    text_file.write("--------------------\n")
+    text_file.write("------------------------------------------\n")
     text_file.write(f"Total Months: {total_months}\n")
     text_file.write(f"Net Total: ${total_amount}\n")
     text_file.write(f"Average Change: ${average_change}\n")
