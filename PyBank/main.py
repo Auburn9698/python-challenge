@@ -15,7 +15,6 @@ greatest_profit = 0
 greatest_profit_month = 0
 greatest_loss = 0
 greatest_loss_month = 0
-initial_amount = 0
 month = []
 monthly_changes = []
 
