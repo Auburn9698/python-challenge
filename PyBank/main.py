@@ -40,6 +40,11 @@ with open(csvpath) as csvfile:
             greatest_profit = int(row[1])
             greatest_profit_month = row[0]
 
+        # Note: Not sure I needed greatest profit or greatest loss.
+        # It looked like the homework was asking for that at first,
+        # but I think it was actually looking for the greatest changes
+        # +/- from month to month.  Wasn't real clear at first.
+
         # Check to see if this is the greatest loss so far:      
         if int(row[1]) < greatest_loss:
             greatest_loss = int(row[1])
