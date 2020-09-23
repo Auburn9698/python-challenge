@@ -41,14 +41,17 @@ with open(csvpath) as csvfile:
         # Check to see if this is the greatest loss so far:        
         if int(row[1]) < greatest_loss:
             greatest_loss = int(row[1])
-            greatest_loss_month = row[1]
+            greatest_loss_month = row[0]
 
         # Calculate the average monthly change amount:
         monthly_amount = int(row[1])
         monthly_change = monthly_amount - initial_amount
-        initial_amount = monthly_amount
         monthly_changes.append(monthly_change)
-        average_change = sum(monthly_changes)/ len(monthly_changes)
+        initial_amount = monthly_amount
+        average_change = sum(monthly_changes) / len(monthly_changes)
+
+        greatest_increase = max(monthly_changes)
+        greatest_decrease = min(monthly_changes)
 
 # Print the output:
 print("Financial Analysis")
@@ -56,8 +59,12 @@ print("--------------------")
 print(f"Total Months: {total_months}")
 print(f"Net Total: {total_amount}")
 print(f"Average Change: {average_change}")
-print(f"Greatest Increase in Profits: {greatest_profit_month} {greatest_profit}")
-print(f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}")
+print(f"Greatest Increase in Profits: {greatest_profit_month} ({greatest_increase})")
+print(f"Greatest Decrese in Losses: {greatest_loss_month} ({greatest_decrease})")
+
+
+
+
 
 # Create a list for the output:
 #output = (f"Financial Analysis:",
@@ -81,7 +88,7 @@ print(f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}")
 #          f"Net Total: {total_amount}",
 #          f"Average Change: {average_change}",
 #          f"Greatest Increase in Profits: {greatest_profit_month} {greatest_profit}",
-#          f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}")#
+#          f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}")
 
 #print(output)
 
