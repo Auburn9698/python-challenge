@@ -50,6 +50,7 @@ with open(csvpath) as csvfile:
         initial_amount = monthly_amount
         average_change = sum(monthly_changes) / len(monthly_changes)
 
+        # Find the largest increase and decrease:
         greatest_increase = max(monthly_changes)
         greatest_decrease = min(monthly_changes)
 
@@ -65,34 +66,4 @@ print(f"Greatest Decrese in Losses: {greatest_loss_month} ({greatest_decrease})"
 
 
 
-
-# Create a list for the output:
-#output = (f"Financial Analysis:",
-#          f"---------------------------",
-#          f"Total Months: {total_months}",
-#          f"Net Total: {total_amount}",
-#          f"Average Change: {average_change}",
-#          f"Greatest Increase in Profits: {greatest_profit_month} {greatest_profit}",
-#          f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}"
-#
-#print(output)
-#
-# Write to the analysis.text text file as pathout:
-
-
-
-# Create a list for the output:
-#output = (f"Financial Analysis:",
-#          f"---------------------------",
-#          f"Total Months: {total_months}",
-#          f"Net Total: {total_amount}",
-#          f"Average Change: {average_change}",
-#          f"Greatest Increase in Profits: {greatest_profit_month} {greatest_profit}",
-#          f"Greatest Decrese in Losses: {greatest_loss_month} {greatest_loss}")
-
-#print(output)
-
-# Write to the analysis.text text file as pathout:
-#with open(pathout, "w") as text_file:
-#    text_file.write(output)
 
