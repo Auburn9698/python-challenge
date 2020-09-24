@@ -66,31 +66,54 @@ with open(csvpath) as csvfile:
     OTooley_percent = OTooley_votes / Total_votes
     Other_percent = Other_votes / Total_votes
 
+# Storing election results as list:
+
+results = (
+    "Election Results\n"
+    "---------------------------------------- \n"
+    f"Total Votes:     {Total_votes} \n"
+    "---------------------------------------- \n"
+    f"Khan:    {Khan_percent:.2%} ({Khan_votes}) \n"
+    f"Correy: {Correy_percent: .2%}  ({Correy_votes}) \n"
+    f"Li:      {Li_percent:.2%}  ({Li_votes}) \n"
+    f"O'Tooley: {OTooley_percent:.2%}  ({OTooley_votes}) \n"
+    "---------------------------------------- \n"
+    f"Winner:   {Winning_Name} \n"
+    "----------------------------------------")
+
+# Printing what was stored:
+print(results)
+
+#Writing to text file:
+with open(pathout, "w") as text_file:
+    text_file.write(results)
+
+
 # Printing Election Results:
-print("Election Results")
-print("----------------------------------------")
-print(f"Total Votes:     {Total_votes}")
-print("----------------------------------------")
-print(f"Khan:    {Khan_percent:.2%} ({Khan_votes})")
-print(f"Correy: {Correy_percent: .2%}  ({Correy_votes})")
-print(f"Li:      {Li_percent:.2%}  ({Li_votes})")
-print(f"O'Tooley: {OTooley_percent:.2%}  ({OTooley_votes})")
+#print("Election Results")
+#print("----------------------------------------")
+#print(f"Total Votes:     {Total_votes}")
+#print("----------------------------------------")
+#print(f"Khan:    {Khan_percent:.2%} ({Khan_votes})")
+#print(f"Correy: {Correy_percent: .2%}  ({Correy_votes})")
+#print(f"Li:      {Li_percent:.2%}  ({Li_votes})")
+#print(f"O'Tooley: {OTooley_percent:.2%}  ({OTooley_votes})")
 # Commenting out the line below since it isnt' needed, the 
 # error catcher produces count of 0:
 # print(f"Other: {Other_percent:.2%} ({Other_votes})")  
-print("----------------------------------------")
-print(f"Winner:         {Winning_Name}")
-print("----------------------------------------")
+#print("----------------------------------------")
+#print(f"Winner:         {Winning_Name}")
+#print("----------------------------------------")
 
-with open(pathout, "w") as text_file:
-    text_file.write("Election Results \n")
-    text_file.write("---------------------------------------- \n")
-    text_file.write(f"Total Votes:    {Total_votes} \n")
-    text_file.write("---------------------------------------- \n")
-    text_file.write(f"Khan:    {Khan_percent:.2%} ({Khan_votes}) \n")
-    text_file.write(f"Correy: {Correy_percent: .2%} ({Correy_votes}) \n")
-    text_file.write(f"Li:      {Li_percent:.2%} ({Li_votes}) \n")
-    text_file.write(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes}) \n")
-    text_file.write("---------------------------------------- \n")
-    text_file.write(f"|         Winner: {Winning_Name}                 | \n")
-    text_file.write("----------------------------------------")
+#with open(pathout, "w") as text_file:
+#    text_file.write("Election Results \n")
+#    text_file.write("---------------------------------------- \n")
+#    text_file.write(f"Total Votes:    {Total_votes} \n")
+#    text_file.write("---------------------------------------- \n")
+#    text_file.write(f"Khan:    {Khan_percent:.2%} ({Khan_votes}) \n")
+#    text_file.write(f"Correy: {Correy_percent: .2%} ({Correy_votes}) \n")
+#    text_file.write(f"Li:      {Li_percent:.2%} ({Li_votes}) \n")
+#    text_file.write(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes}) \n")
+#    text_file.write("---------------------------------------- \n")
+#    text_file.write(f"|         Winner: {Winning_Name}                 | \n")
+#    text_file.write("----------------------------------------")
