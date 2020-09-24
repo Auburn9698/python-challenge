@@ -40,6 +40,7 @@ with open(csvpath) as csvfile:
             Li_votes = Li_votes + 1
         elif (row[2] == "O'Tooley"):
             OTooley_votes = OTooley_votes + 1
+        #Adding an error catch in case some cells don't match names exactly:
         else:
             Other_votes = Other_votes + 1
     
@@ -55,7 +56,6 @@ with open(csvpath) as csvfile:
         Winning_Name = "Li"
     elif Winner == OTooley_votes:
         Winning_Name = "O'Tooley"
-    #Trying to add an error catch in case some cells don't match names exactly:
     else:
         Winning_name = "Other"
 
@@ -66,7 +66,7 @@ with open(csvpath) as csvfile:
     OTooley_percent = OTooley_votes / Total_votes
     Other_percent = Other_votes / Total_votes
 
-#Printing Election Results:
+# Printing Election Results:
 print("Election Results")
 print("----------------------------------------")
 print(f"Total Votes: {Total_votes}")
@@ -75,7 +75,8 @@ print(f"Khan: {Khan_percent:.2%} ({Khan_votes})")
 print(f"Correy: {Correy_percent: .2%} ({Correy_votes})")
 print(f"Li: {Li_percent:.2%} ({Li_votes})")
 print(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes})")
-print(f"Other: {Other_percent:.2%} ({Other_votes})")
+# Commenting out the line below since it isnt' needed; produces count of 0
+# print(f"Other: {Other_percent:.2%} ({Other_votes})")
 print("----------------------------------------")
 print(f"Winner: {Winning_Name}")
 print("----------------------------------------")
