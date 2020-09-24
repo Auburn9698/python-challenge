@@ -76,7 +76,7 @@ print(f"Correy: {Correy_percent: .2%} ({Correy_votes})")
 print(f"Li: {Li_percent:.2%} ({Li_votes})")
 print(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes})")
 # Commenting out the line below since it isnt' needed; produces count of 0
-# print(f"Other: {Other_percent:.2%} ({Other_votes})")
+# print(f"Other: {Other_percent:.2%} ({Other_votes})")  
 print("----------------------------------------")
 print(f"Winner: {Winning_Name}")
 print("----------------------------------------")
