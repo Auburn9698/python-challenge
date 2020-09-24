@@ -60,7 +60,7 @@ The greatest decrease in losses (date and amount) over the entire period
 
 
 As an example, your analysis should look similar to the one below:
-![results pic](https://github.com/Auburn9698/python-challenge/blob/master/Images/Bank_Results.jpg)
+![results pic](https://github.com/Auburn9698/python-challenge/blob/master/Images/Bank_Results.png)
 
 
 In addition, your final script should both print the analysis to the terminal and export a text file with the results.
@@ -97,7 +97,7 @@ The winner of the election based on popular vote.
 
 As an example, your analysis should look similar to the one below:
 
-![Poll results pic](https://github.com/Auburn9698/python-challenge/blob/master/Images/Poll_Results.jpg)
+![Poll results pic](https://github.com/Auburn9698/python-challenge/blob/master/Images/Poll_Results.png)
 
 
 
