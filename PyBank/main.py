@@ -9,7 +9,7 @@ csvpath = os.path.join("Resources", "budget_data.csv")
 pathout = os.path.join("analysis", "analysis.txt")
 
 # Create the variables:
-total_months = 1
+total_months = 0
 total_amount = 0
 greatest_profit = 0
 greatest_profit_month = 0
