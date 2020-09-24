@@ -31,7 +31,7 @@ Push the above changes to GitHub or GitLab.
 
 
 
-PyBank
+**PyBank**
 
 ![Bank Image](https://github.com/Auburn9698/python-challenge/blob/master/Images/Bank.png)
 Format: ![Alt Text](url)
@@ -73,7 +73,7 @@ In addition, your final script should both print the analysis to the terminal an
 
 
 
-PyPoll
+**PyPoll**
 
 
 
