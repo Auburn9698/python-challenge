@@ -9,7 +9,7 @@ csvpath = os.path.join("Resources", "budget_data.csv")
 pathout = os.path.join("analysis", "analysis.txt")
 
 # Create the variables:
-total_months = 0
+total_months = 1
 total_amount = 0
 greatest_profit = 0
 greatest_profit_month = 0
@@ -72,11 +72,11 @@ output = (
     " \n"
     "Financial Analysis: \n"
     "----------------------------------------------- \n"
-    f"Total Months: {total_months} \n"
-    f"Net Total: ${total_amount} \n"
+    f"Total Months:    {total_months} \n"
+    f"Net Total:      ${total_amount} \n"
     f"Average Change: ${average_change:.2f} \n"
-    f"Greatest Increase in Profits: {increase_month} (${greatest_increase}) \n"
-    f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease}) \n")
+    f"Greatest Increase in Profits: {increase_month} ($ {greatest_increase}) \n"
+    f"Greatest Decrese in Losses:   {decrease_month} (${greatest_decrease}) \n")
 
 # Print the output:
 print(output)
