@@ -84,7 +84,7 @@ results = (
 # Printing what was stored:
 print(results)
 
-# Writing to text file:  
+# Writing to text file:    
 with open(pathout, "w") as text_file:
     text_file.write(results)
 

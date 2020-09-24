@@ -81,7 +81,7 @@ output = (
 # Print the output:
 print(output)
 
-# Write the output to text file analysis.txt:
+# Write the output to text file analysis.txt:  
 with open(pathout, "w") as text_file:
     text_file.write(output)
 
