@@ -57,7 +57,7 @@ with open(csvpath) as csvfile:
         previous_amount = int(row[1])
        
 
-    #Calculate average change:
+    # Calculate average change:
     average_change = sum(monthly_changes) / total_months
 
     # Find the largest increase and decrease:
@@ -66,28 +66,22 @@ with open(csvpath) as csvfile:
 
     increase_month = month[monthly_changes.index(greatest_increase)]
     decrease_month = month[monthly_changes.index(greatest_decrease)]
-        
+
+# Storing output in a tuple to print and write to text file(shorter code)        
+output = (
+    " \n"
+    "Financial Analysis: \n"
+    "----------------------------------------------- \n"
+    f"Total Months: {total_months} \n"
+    f"Net Total: ${total_amount} \n"
+    f"Average Change: ${average_change:.2f} \n"
+    f"Greatest Increase in Profits: {increase_month} (${greatest_increase}) \n"
+    f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease}) \n")
 
 # Print the output:
-print(" ")
-print("Financial Analysis:")
-print("-----------------------------------------------")
-print(f"Total Months: {total_months}")
-print(f"Net Total: ${total_amount}")
-print(f"Average Change: ${average_change:.2f}")
-print(f"Greatest Increase in Profits: {increase_month} (${greatest_increase})")
-print(f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease})")
+print(output)
 
+# Write the output to text file analysis.txt:
 with open(pathout, "w") as text_file:
-    text_file.write("Financial Analysis\n")
-    text_file.write("------------------------------------------\n")
-    text_file.write(f"Total Months: {total_months}\n")
-    text_file.write(f"Net Total: ${total_amount}\n")
-    text_file.write(f"Average Change: ${average_change:.2f}\n")
-    text_file.write(f"Greatest Increase in Profits: {increase_month} (${greatest_increase})\n")
-    text_file.write(f"Greatest Decrese in Losses: {decrease_month} (${greatest_decrease})\n")
-
-
-
-
+    text_file.write(output)
 
