@@ -6,7 +6,7 @@ import csv
 
 # Paths for CSV files:
 csvpath = os.path.join("Resources", "election_data.csv")
-pathout = os.path.join("Resources", "analysis.txt")
+pathout = os.path.join("analysis", "analysis.txt")
 
 # Create variables:
 Khan_votes = 0
@@ -52,7 +52,8 @@ with open(csvpath) as csvfile:
         Winning_Name = "Li"
     else:
         Winning_Name = "O'Tooley"
-            # Calculate percentages for each candidate:
+
+    # Calculate percentages for each candidate:
     Khan_percent = Khan_votes / Total_votes
     Correy_percent = Correy_votes / Total_votes
     Li_percent = Li_votes / Total_votes
@@ -70,3 +71,16 @@ print(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes})")
 print("----------------------------------------")
 print(f"Winner: {Winning_Name}")
 print("----------------------------------------")
+
+with open(pathout, "w") as text_file:
+    text_file.write("Election Results")
+    text_file.write("----------------------------------------")
+    text_file.write(f"Total Votes: {Total_votes}")
+    text_file.write("----------------------------------------")
+    text_file.write(f"Khan: {Khan_percent:.2%} ({Khan_votes})")
+    text_file.write(f"Correy: {Correy_percent: .2%} ({Correy_votes})")
+    text_file.write(f"Li: {Li_percent:.2%} ({Li_votes})")
+    text_file.write(f"O'Tooley: {OTooley_percent:.2%} ({OTooley_votes})")
+    text_file.write("----------------------------------------")
+    text_file.write(f"Winner: {Winning_Name}")
+    text_file.write("----------------------------------------")
