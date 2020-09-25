@@ -40,10 +40,13 @@ with open(csvpath) as csvfile:
             Li_votes = Li_votes + 1
         elif (row[2] == "O'Tooley"):
             OTooley_votes = OTooley_votes + 1
-        #Adding an error catch in case some cells don't match names exactly:
+        # Adding an error catch in case some cells don't match names exactly:
         else:
             Other_votes = Other_votes + 1
-    
+        # Note: Didn't include Other_voates in final stats.  Looked like there were
+        # not any cells that had values other than the four candidates / nothing 
+        # mis-spelled, etc.
+
     # Compare Totals, find largest number of votes:
     Winner = max(Khan_votes, Correy_votes, Li_votes, OTooley_votes, Other_votes)
        
@@ -58,7 +61,10 @@ with open(csvpath) as csvfile:
         Winning_Name = "O'Tooley"
     else:
         Winning_name = "Other"
-
+        # Note: Didn't include Other in final stats.  Looked like there were
+        # not any cells that had values other than the four candidates / nothing 
+        # mis-spelled, etc.
+    
     # Calculate percentages for each candidate:
     Khan_percent = Khan_votes / Total_votes
     Correy_percent = Correy_votes / Total_votes
